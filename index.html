@@ -1,23 +1,75 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Scarlett Chen</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/reset.css"/>
+        <meta charset="utf-8">
+        <title>Fighting Player!</title>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap" rel="stylesheet">
     </head>
+
     <body>
+        <div class="title">
+            <div class="titleImg">
+                <img src="images/home_title.png">
+            </div>
+        </div>
+        <section class="container">
+            <div class="boxs">
+                <div class="box left">
+                    <img id="left" src="animation/home_left_animation.gif" onmouseover="leftMouse()" onmouseout="leftMouseOut()">
+                </div>
+                <div class="box center">
+                    <img id="center" src="animation/home_center_animation.gif" onmouseover="centerMouse()" onmouseout="centerMouseOut()">
+                </div>
+                <div class="box right">
+                    
+                    <div class="rightImg">
+                        <img src="images/home_right.png">
+                    </div>
+                    <div class="article">
+                        <h1>How to play</h1>
+                        <article>
+                            <p>sdfkl;euvnl;m;lxhjlhjknd;wcm,</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>   
+        <div id="start" onmouseover="startMouse()" onmouseout="startMouseOut()">
+            <img src="images/home_start.png" >
+        </div>
+
+        <script>
+            /*left box*/
+            function leftMouse(){
+                document.getElementById('left').src = "images/home_left.png";
+            }
+            function leftMouseOut(){
+                document.getElementById('left').src = "animation/home_left_animation.gif";
+            }
+
+            /*center box*/
+            function centerMouse(){
+                document.getElementById('center').src = "images/home_center.png";
+            }
+            function centerMouseOut(){
+                document.getElementById('center').src = "animation/home_center_animation.gif";
+            }
+
+            /*start*/
+            function startMouse(){
+                document.getElementById('start').style.marginTop="1.5vw";
+            }
+            function startMouseOut(){
+                document.getElementById('start').style.marginTop="1vw";
+            }
 
         
-        <header>
-        </header>
+        </script>
 
-        <section>
-        </section>
 
-        <footer>
-        </footer>
 
-       
+
     </body>
     
 </html>
