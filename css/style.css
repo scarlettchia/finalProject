@@ -82,7 +82,7 @@ h1{
     width: 35vw;
 
 }
-.article{
+.howToPlay{
     width: 30vw;
     height: 12vw;
     margin-top: 10vw;
@@ -90,6 +90,8 @@ h1{
     color:white;
     position:absolute;
     z-index:1;
+    word-break:break-all;
+    overflow: hidden;
 }
 
 
