@@ -102,3 +102,42 @@ h1{
     margin-top: 1vw;
     margin-bottom: 4vw;
 }
+
+/*------quizPage--------*/
+
+.quizContainer{
+    margin-top: 5vw;
+    margin-left: auto;
+    margin-bottom: 0px;
+    margin-right: auto;
+    width: 90%;
+    /*background-color: white;*/
+
+}
+.quizLeft {   
+    width: 45vw;
+    margin-top: 5vw;
+    margin-left: 2.5vw;
+    background-color: black;
+}
+
+.quizRight {   
+    width: 37vw;
+    height: 40vw;
+    margin-top: 5vw;
+    margin-left: 2vw;
+    background-color: black;
+
+}
+
+.question{
+    width: 30vw;
+    height: 12vw;
+    margin-top: 5vw;
+    margin-left: 2vw;
+    color:white;
+    position:absolute;
+    z-index:1;
+    word-break:break-all;
+    overflow: hidden;
+}
