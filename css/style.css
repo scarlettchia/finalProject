@@ -21,14 +21,28 @@ a{
     color: #FFFFFF;
 }
 
-h1{
-    font-size: 2.5 em;
+h2{
+    font-size: 2vw;
+}
+
+p{
+    font-size: 1.5vw;
 }
 
 
 /*Structure*/
+  section {
+    padding: 3%;
+    /*height: 100vh;*/
+    width: 100vw;
+  }
+  
+  /*section:first-of-type {
+    background: #ffc600;
+  }*/
+
 .title{
-    top: 2vw;
+    top: 0vw;
     left: 7vw;
     width: 90%;
     position:absolute;
@@ -37,16 +51,14 @@ h1{
 
 .titleImg{
     width:50vw;
-    height: 15vw;
     margin-bottom: 1vw;
 }
 
 .container{
-    margin-top: 10vw;
+    margin-top: 5vw;
     margin-left: auto;
     margin-bottom: 0px;
     margin-right: auto;
-    width: 90%;
     background-color: black;
 
 }
@@ -84,8 +96,7 @@ h1{
 }
 .howToPlay{
     width: 30vw;
-    height: 12vw;
-    margin-top: 10vw;
+    margin-top: 8vw;
     margin-left: 2vw;
     color:white;
     position:absolute;
@@ -98,15 +109,20 @@ h1{
 #start{
     margin: 0 auto;
     width:18vw;
-    height: 7vw;
     margin-top: 1vw;
     margin-bottom: 4vw;
 }
 
-/*------quizPage--------*/
+
+  
+ /* section:nth-of-type(2) {
+    background: red;
+  }*/
+
+  /*------quizPage--------*/
 
 .quizContainer{
-    margin-top: 5vw;
+    margin-top: 0px;
     margin-left: auto;
     margin-bottom: 0px;
     margin-right: auto;
@@ -116,28 +132,163 @@ h1{
 }
 .quizLeft {   
     width: 45vw;
-    margin-top: 5vw;
-    margin-left: 2.5vw;
+    height: 48vw;
     background-color: black;
 }
 
-.quizRight {   
-    width: 37vw;
-    height: 40vw;
-    margin-top: 5vw;
+.quizRight {
+    width: 38vw;
+    height: 48vw;
     margin-left: 2vw;
     background-color: black;
+
+}
+.questionImg{
+    position:absolute;
+    width: 34vw;
+    margin-left: 3vw;
 
 }
 
 .question{
-    width: 30vw;
-    height: 12vw;
+    width: 28vw;
     margin-top: 5vw;
-    margin-left: 2vw;
+    margin-left: 5vw;
     color:white;
     position:absolute;
     z-index:1;
     word-break:break-all;
     overflow: hidden;
+
 }
+
+
+.ansImgA{
+    position:absolute;
+    width: 32vw;
+    margin-top: 23vw;
+    margin-left: 3vw;
+}
+
+.ansA{
+    width: 29vw;
+    margin-top: 23vw;
+    margin-left: 5vw;
+    color:black;
+    position:absolute;
+    z-index:1;
+    word-break:break-all;
+    overflow: hidden;
+}
+
+.ansImgB{
+    position:absolute;
+    width: 32vw;
+    margin-top: 32vw;
+    margin-left: 3vw;
+
+}
+
+.ansB{
+    width: 29vw;
+    margin-top: 32vw;
+    margin-left: 5vw;
+    color:black;
+    position:absolute;
+    z-index:1;
+    word-break:break-all;
+    overflow: hidden;
+}
+
+.lastQuizLeft {   
+    width: 45vw;
+    height: 45vw;
+    background-color: black;
+}
+
+.lastQuizRight {
+    width: 38vw;
+    height: 45vw;
+    margin-left: 2vw;
+    background-color: black;
+
+}
+
+#submit{
+    margin: 0 auto;
+    width:20vw;
+    margin-top: 1vw;
+    margin-bottom: 4vw;
+
+}
+/*---------------------------*/
+/*  
+  section:nth-of-type(3) {
+    background: blue;
+  }
+  
+  section:nth-of-type(4) {
+    background: green;
+  }
+*/  
+  nav {
+    position: fixed;
+    right: 5%;
+    top: 30%;
+    z-index: 2;
+  }
+  
+  ul {
+    list-style-type: none;
+  }
+  
+  a {
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+    height: 10px;
+    width: 10px;
+    /* hide text  */
+    text-indent: -9999px;
+  }
+  
+  nav a.current {
+    background: grey;
+  }
+  
+  .rect {
+    background: black;
+    height: 20vh;
+    width: 500px;
+  }
+  
+  .align-left {
+    float: left;
+    margin-right: 20px;
+  }
+  
+  .align-right {
+    float: right;
+    margin-top: 10vh;
+    margin-left: 20px;
+  }
+  
+  .slide-in {
+    opacity: 0;
+    transition: all .5s;
+  }
+  
+  .align-left.slide-in {
+    transform: translateX(-50%) scale(0.95);
+  }
+  
+  .align-right.slide-in {
+    transform: translateX(50%) scale(0.95);
+  }
+  
+  .slide-in.active {
+    opacity: 1;
+    transform: translateX(0%) scale(1);
+  }
