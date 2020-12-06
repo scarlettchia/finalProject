@@ -9,6 +9,7 @@ html{
     linear-gradient(#E5ACBA 1px, transparent 0),
     linear-gradient(90deg, #E5ACBA  1px, transparent 0);
     background-size: 30px 30px, 30px 30px;
+    background-attachment: fixed;
 }
 
 
@@ -133,7 +134,7 @@ p{
 .quizLeft {   
     width: 45vw;
     height: 48vw;
-    background-color: black;
+
 }
 
 .quizRight {
@@ -203,7 +204,7 @@ p{
 .lastQuizLeft {   
     width: 45vw;
     height: 45vw;
-    background-color: black;
+ 
 }
 
 .lastQuizRight {
@@ -221,6 +222,29 @@ p{
     margin-bottom: 4vw;
 
 }
+/*winpage
+.congrat{
+  position:absolute;
+  margin-left: 4vw;
+  margin-top:2vw;
+  z-index: 1;
+}
+.winLeft {  
+    margin-top: 7vw;
+    margin-bottom: 4vw;
+    margin-left: 8vw;
+    margin-right:3vw;
+}    
+
+#home{
+      margin: 0 auto;
+      width:18vw;
+      margin-top: 1vw;
+      margin-bottom: 4vw;
+  }
+  
+
+
 /*---------------------------*/
 /*  
   section:nth-of-type(3) {
