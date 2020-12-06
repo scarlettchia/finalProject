@@ -1,6 +1,7 @@
 const navLinks = document.querySelectorAll('nav a'),
 sliderRects = document.querySelectorAll('.rect');
 
+
 function scrollSection(section) {
 
 window.scroll({
@@ -92,30 +93,55 @@ function goToEnd() {
 }
 
 /*click Ans*/
- const next = document.querySelectorAll('.next');
- console.log(next);
  
-/*
-function clickAns(){
-  next[0].style.display="";
-}*/
 
-/*correct answer
 var correct = 0;
 var clicked = false;
 const correctNum = document.getElementById('correctNum');
+const next = document.querySelectorAll('.next')[0];
 
 correctNum.innerHTML=correct;
 
-function increaseCorrect() {
-  
+function correctAns(){
   if(clicked == false){
     correct++;
     clicked = true;
   }
-  correctNum.innerHTML=correct;
-    console.log(correct)
-}*/
+  correctNum.innerHTML=correct; 
+  next.hidden=false;
+  console.log(correct);
+};
 
+function wrongAns(){
+  if(clicked == false){
+    clicked = true;
+  }
+  next.hidden=false;
+  console.log(correct);
+};
+
+function goToQ2(){
+  scrollSection(navLinks[2].dataset.link);
+  clicked=false;
+  next.hidden=true;
+}
+
+function goToQ3(){
+  scrollSection(navLinks[3].dataset.link);
+  clicked=false;
+  next.hidden=true;
+}
+
+function goToQ4(){
+  scrollSection(navLinks[4].dataset.link);
+  clicked=false;
+  next.hidden=true;
+}
+
+function goToQ5(){
+  scrollSection(navLinks[5].dataset.link);
+  clicked=false;
+  next.hidden=true;
+}
 
 
