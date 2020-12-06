@@ -97,7 +97,7 @@ function correctAns(){
   correctNum.innerHTML=correct; 
   for(let i = 0; i < nexts.length; i++) {
     nexts[i].hidden=false;
-    result.style.display="20vw";
+    result.style.width="20vw";
   }
 
 };
