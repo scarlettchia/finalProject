@@ -22,242 +22,221 @@
                 </ul>
             </nav>
               
-            <section id="section-1">
+            <section id="section-1" style="padding-top:0.5%">
                     <div class="title">
-                        <div class="titleImg">
-                            <img src="images/home_title.png">
-                        </div>
+                        <img class="titleImg" src="images/home_title.png"> 
                     </div>
                     <div class="container">
-                        <div class="boxs">
-                            <div class="box left">
+                        
+                            <div class="left">
                                 <img id="left" src="animation/home_left_animation.gif">
                             </div>
-                            <div class="box center">
+                            <div class="center">
                                 <img id="center" src="animation/home_center_animation.gif" >
                             </div>
-                            <div class="box right">
-                                
-                                <div class="rightImg">
-                                    <img src="animation/home_right_animation.gif">
-                                </div>
-                                <div class="howToPlay">
+                            <div class="right">
+                                <img class="rightImg" src="animation/home_right_animation.gif">
+                                <div class="rightWord">
                                     <h2>How to play</h2>
                                     <p style="font-size: 1.25vw;">Are you a master of dessert? Here are 5 questions</br>about some desserts’ fun facts.</br>See how many correct answers you can get!</p>
-
                                 </div>
                             </div>
-                        </div>
+                        
                     </div>   
-                    <div id="start">
+                    <div id="start" onclick="startQuiz()" >
                             <img src="images/home_start.png" >
                     </div>
+
+
+
             </section>
 
             <section id="section-2">
                     <div class="quizContainer">
-                        <div class="boxs">
-                            <div class="quizLeft">
-                                <img src="images/quizImages/canele.png">
-                            </div>
-                            <div class="quizRight">
-                                <div class="questionImg">
-                                    <img src="images/quizImages/question.png">
-                                </div>
-                                <div class="question">
-                                    <h2>Question 1</h2>
-                                    <article>
-                                        <p>How did the Franch dessert, Canelé,</br>come out?</p>
-                                    </article>
-                                </div>
-            
-                                <div class="ansImgA">
-                         
-                                        <img class="ansImg" src="images/quizImages/ans.png">
-                                </div>
-                                    <div class="ansA">
-                                       
-                                            <p>A baking failure by a nun in a French</br>monastery in the 16 Century.</p>
-                                       
-                                    </div>
-                                
-            
-                                <div class="ansImgB">
-                                    <img class="ansImg" src="images/quizImages/ans.png">
-                                </div>
-                                <div class="ansB">
-                                    
-                                        <p>A gift from a noble to show affection</br>for a woman.</p>
-                                  
-                                </div>
-                            </div>
+                        <div class="quizLeft">
+                            <img src="images/quizImages/canele.png">
                         </div>
-                    </div> 
+                        <div class="quizRight">
+                            <img class="questionImg" src="images/quizImages/question.png">
+                            <div class="question">
+                                <h2>Question 1</h2>
+                                <article>
+                                    <p>How did the Franch dessert, Canelé,</br>come out?</p>
+                                </article>
+                            </div>
+        
+                            <div class="ansA" onclick="clickAns()">
+                                <img class="ansImg" src="images/quizImages/ans.png">
+                                <div class="ansWord">
+                                    <p>A baking failure by a nun in a French</br>monastery in the 16 Century.</p>
+                                </div>
+                            </div>
+        
+                            <div class="ansB" onclick="clickAns()">
+                                <img class="ansImg" src="images/quizImages/ans.png">
+                                <div class="ansWord">
+                                    <p>A gift from a noble to show affection</br>for a woman in the 15 Century.</p>
+                                </div>
+                            </div>
+                            <div class="next">
+                                <img  src="images/quizImages/result.png" >
+                            </div> 
+                        </div>
+                    </div>
             </section>
 
             <section id="section-3">
                 <div class="quizContainer">
-                    <div class="boxs">
-                        <div class="quizLeft">
-                            <img src="images/quizImages/ginger.png">
-                        </div>
-                        <div class="quizRight">
-                            <div class="questionImg">
-                                <img src="images/quizImages/question.png">
-                            </div>
-                            <div class="question">
-                                <h2>Question 2</h2>
-                                <article>
+                    <div class="quizLeft">
+                        <img src="images/quizImages/ginger.png">
+                    </div>
+                    <div class="quizRight">
+                        <img class="questionImg" src="images/quizImages/question.png">
+                        <div class="question">
+                            <h2>Question 2</h2>
+                            <article>
                                     <p>Whose appearance is the basic of</br>gingerbread man’s look?</p>
                                 </article>
-                            </div>
-        
-                            <div class="ansImgA">
-                                <img class="ansImg" src="images/quizImages/ans.png">
-                            </div>
-                            <div class="ansA">
-                                
+                        </div>
+                        <div class="ansA" onclick="increaseCorrect()">
+                            <img class="ansImg" src="images/quizImages/ans.png">
+                            <div class="ansWord">
                                 <p style="margin-top:2.5vw">Queen Elizabeth I</p>
-                            
                             </div>
-        
-                            <div class="ansImgB">
-                                <img class="ansImg" src="images/quizImages/ans.png">
-                            </div>
-                            <div class="ansB">
+                        </div>
+                        <div class="ansB">
+                            <img class="ansImg" src="images/quizImages/ans.png">
+                            <div class="ansWord">
                                 <p style="margin-top:2.5vw">Queen Elizabeth II</p>
-                                
                             </div>
                         </div>
                     </div>
-                </div> 
-        </section>
+                </div>
+            </section>
 
-        <section id="section-4">
-            <div class="quizContainer">
-                <div class="boxs">
+            <section id="section-4">
+                <div class="quizContainer">
                     <div class="quizLeft">
                         <img src="images/quizImages/tiramisu.png">
                     </div>
                     <div class="quizRight">
-                        <div class="questionImg">
-                            <img src="images/quizImages/question.png">
-                        </div>
+                        <img class="questionImg" src="images/quizImages/question.png">
                         <div class="question">
                             <h2>Question 3</h2>
                             <article>
-                                <p>What does “Tiramisù” originally mean</br>in Italian? </p>
-                            </article>
+                                    <p>What does “Tiramisù” originally mean</br>in Italian?</p>
+                                </article>
                         </div>
-    
-                        <div class="ansImgA">
+                        <div class="ansA" onclick="increaseCorrect()">
                             <img class="ansImg" src="images/quizImages/ans.png">
-                        </div>
-                        <div class="ansA">
-
-                            
+                            <div class="ansWord">
                                 <p style="margin-top:2.5vw">Pick me up</p>
-                            
-                        </div>
-    
-                        <div class="ansImgB">
-                            <img class="ansImg" src="images/quizImages/ans.png">
+                            </div>
                         </div>
                         <div class="ansB">
-
-                          
+                            <img class="ansImg" src="images/quizImages/ans.png">
+                            <div class="ansWord">
                                 <p style="margin-top:2.5vw">Let me go</p>
-                           
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div> 
-        </section>
+            </section>
 
-        <section id="section-5">
-            <div class="quizContainer">
-                <div class="boxs">
+            <section id="section-5">
+                <div class="quizContainer">
                     <div class="quizLeft">
                         <img src="images/quizImages/chocolate.png">
                     </div>
                     <div class="quizRight">
-                        <div class="questionImg">
-                            <img src="images/quizImages/question.png">
-                        </div>
+                        <img class="questionImg" src="images/quizImages/question.png">
                         <div class="question">
                             <h2>Question 4</h2>
                             <article>
-                                <p>What does “Chocolate” mean in</br>Greek?</p>
-                            </article>
+                                    <p>What does “Chocolate” mean in</br>Greek?</p>
+                                </article>
                         </div>
-    
-                        <div class="ansImgA">
+                        <div class="ansA" onclick="increaseCorrect()">
                             <img class="ansImg" src="images/quizImages/ans.png">
-                        </div>
-                        <div class="ansA">
-                        
+                            <div class="ansWord">
                                 <p style="margin-top:2.5vw">Food of the Gods</p>
-                
-                        </div>
-    
-                        <div class="ansImgB">
-                            <img class="ansImg" src="images/quizImages/ans.png">
+                            </div>
                         </div>
                         <div class="ansB">
-         
+                            <img class="ansImg" src="images/quizImages/ans.png">
+                            <div class="ansWord">
                                 <p style="margin-top:2.5vw">Food of the Ghosts</p>
-                    
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div> 
-    </section>
+            </section>
 
-    <section id="section-6">
-        <div class="quizContainer">
-            <div class="boxs">
-                <div class="lastQuizLeft">
-                    <img src="images/quizImages/puff.png">
+            <section id="section-6" style="padding-bottom:0%">
+                <div class="quizContainer">
+                    <div class="lastQuizLeft">
+                        <img src="images/quizImages/puff.png">
+                    </div>
+                    <div class="lastQuizRight">
+                        <img class="questionImg" src="images/quizImages/question.png">
+                        <div class="question">
+                            <h2>Question 5</h2>
+                            <article>
+                                    <p>What does “Cream Puff” means in</br>French?</p>
+                                </article>
+                        </div>
+                        <div class="ansA" onclick="increaseCorrect()">
+                            <img class="ansImg" src="images/quizImages/ans.png">
+                            <div class="ansWord">
+                                <p style="margin-top:2.5vw">Cabbage</p>
+                            </div>
+                        </div>
+                        <div class="ansB">
+                            <img class="ansImg" src="images/quizImages/ans.png">
+                            <div class="ansWord">
+                                <p style="margin-top:2.5vw">Explosion</p>
+                            </div>
+                        </div>
+                        <div id="result" onclick="goToEnd()">
+                            <img src="images/quizImages/result.png" >
+                        </div> 
+                    </div>
                 </div>
-                <div class="lastQuizRight">
-                    <div class="questionImg">
-                        <img src="images/quizImages/question.png">
-                    </div>
-                    <div class="question">
-                        <h2>Question 5</h2>
-                        <article>
-                            <p>What does “Cream Puff” means in</br>French?</p>
-                        </article>
-                    </div>
+            </section>
 
-                    <div class="ansImgA">
-                        <img class="ansImg" src="images/quizImages/ans.png">
-                    </div>
-                    <div class="ansA">
-                    
-                            <p style="margin-top:2.5vw">Cabbage</p>
             
-                    </div>
-
-                    <div class="ansImgB">
-                        <img class="ansImg" src="images/quizImages/ans.png">
-                    </div>
-                    <div class="ansB">
-     
-                            <p style="margin-top:2.5vw">Explosion</p>
-                
-                    </div>
-                </div>
-            </div>
-            <div id="submit">
-                <img src="images/quizImages/submit.png" >
-            </div> 
         </div>
         
     </section>
+
+    <section id="section-7" style="padding-top:0.5%">
+        <div class="title">
+            <img class="titleImg" src="images/home_title.png"> 
+        </div>
+        <div class="container">
+            
+                <div class="left">
+                    <img id="left" src="animation/home_left_animation.gif">
+                </div>
+                <div class="center">
+                    <img id="center" src="animation/home_center_animation.gif" >
+                </div>
+                <div class="right">
+                    <img class="rightImg" src="animation/home_right_animation.gif">
+                    <div class="rightWord">
+                        <h2>How to play</h2>
+                        <p style="font-size: 1.25vw;">Wow! You get <p id="correctNum"></p> correct answers!</p>
+                    </div>
+                </div>
+         
+        </div>   
+        <div id="home" onclick="goToHome()" >
+                <img src="images/home_start.png" >
+        </div>
+    </section>
    
               
-            <section id="section-7">
+            <section id="section-8">
               
                 <h2>Here Comes Quiz</h2>
                 <div class="rect slide-in align-left"></div>

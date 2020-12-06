@@ -37,6 +37,9 @@ window.addEventListener('scroll', function() {
 animateStuff();
 });
 
+
+
+
 /*left box*/
 const left = document.getElementById('left');
 left.addEventListener('mouseenter', () => {
@@ -66,26 +69,53 @@ start.addEventListener('mouseleave', () => {
     start.style.marginTop="1vw";
   });
 
-/*ans box
-const ansImg = document.querySelectorAll('.ansImg');
+function startQuiz() {
+    scrollSection(navLinks[1].dataset.link);
+ }
 
-ansImg.forEach(function(element) {
-    .addEventListener('mouseenter',element () => {
-        ansImg[0].src = "images/quizImages/ansChosen.png";
-      });
-    element.addEventListener('mouseleave', () => {
-        ansImg[0].src = "images/quizImages/ans.png";
-      });  
-    });
+ /*result*/
+const result = document.getElementById('result');
 
-
-/*submit*/
-const submit = document.getElementById('submit');
-
-submit.addEventListener('mouseenter', () => {
-    submit.style.marginTop="1.5vw";
+result.addEventListener('mouseenter', () => {
+  result.style.marginTop="41.5vw";
   });
-submit.addEventListener('mouseleave', () => {
-    submit.style.marginTop="1vw";
+result.addEventListener('mouseleave', () => {
+  result.style.marginTop="41vw";
   });  
+
+function goToEnd() {
+    scrollSection(navLinks[6].dataset.link);
+ }
+
+ function goToHome() {
+  scrollSection(navLinks[0].dataset.link);
+}
+
+/*click Ans*/
+ const next = document.querySelectorAll('.next');
+ console.log(next);
+ 
+/*
+function clickAns(){
+  next[0].style.display="";
+}*/
+
+/*correct answer
+var correct = 0;
+var clicked = false;
+const correctNum = document.getElementById('correctNum');
+
+correctNum.innerHTML=correct;
+
+function increaseCorrect() {
+  
+  if(clicked == false){
+    correct++;
+    clicked = true;
+  }
+  correctNum.innerHTML=correct;
+    console.log(correct)
+}*/
+
+
 

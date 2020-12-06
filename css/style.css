@@ -10,6 +10,7 @@ html{
     linear-gradient(90deg, #E5ACBA  1px, transparent 0);
     background-size: 30px 30px, 30px 30px;
     background-attachment: fixed;
+    overflow: hidden;
 }
 
 
@@ -43,8 +44,6 @@ p{
   }*/
 
 .title{
-    top: 0vw;
-    left: 7vw;
     width: 90%;
     position:absolute;
     z-index: 1;
@@ -56,17 +55,16 @@ p{
 }
 
 .container{
-    margin-top: 5vw;
+    margin-top: 9vw;
     margin-left: auto;
     margin-bottom: 0px;
     margin-right: auto;
     background-color: black;
-
-}
-
-.boxs{
     display: flex;
+
 }
+
+
 
 .left {   
     width: 25vw;
@@ -95,7 +93,7 @@ p{
     width: 35vw;
 
 }
-.howToPlay{
+.rightWord{
     width: 30vw;
     margin-top: 8vw;
     margin-left: 2vw;
@@ -128,7 +126,7 @@ p{
     margin-bottom: 0px;
     margin-right: auto;
     width: 90%;
-    /*background-color: white;*/
+    display: flex;
 
 }
 .quizLeft {   
@@ -139,7 +137,7 @@ p{
 
 .quizRight {
     width: 38vw;
-    height: 48vw;
+    height: 45vw;
     margin-left: 2vw;
     background-color: black;
 
@@ -163,63 +161,65 @@ p{
 
 }
 
-
-.ansImgA{
-    position:absolute;
-    width: 32vw;
-    margin-top: 23vw;
-    margin-left: 3vw;
-}
-
 .ansA{
-    width: 29vw;
-    margin-top: 23vw;
-    margin-left: 5vw;
-    color:black;
-    position:absolute;
-    z-index:1;
-    word-break:break-all;
-    overflow: hidden;
-}
-
-.ansImgB{
     position:absolute;
     width: 32vw;
-    margin-top: 32vw;
+    height: 10vw;
+    margin-top: 23vw;
     margin-left: 3vw;
-
+    z-index: 1;
+}
+.ansB{
+  position:absolute;
+  width: 32vw;
+  height: 10vw;
+  margin-top: 32vw;
+  margin-left: 3vw;
+  z-index: 1;
 }
 
-.ansB{
-    width: 29vw;
-    margin-top: 32vw;
-    margin-left: 5vw;
+.ansImg{
+  position:absolute;
+  width: 35vw;
+}
+
+.ansWord{
+    margin-left: 2vw;
     color:black;
     position:absolute;
     z-index:1;
     word-break:break-all;
     overflow: hidden;
+}
+.next{
+  position:absolute;
+  z-index:1;
+  width:20vw;
+  margin-top: 41vw;
+  margin-left:9vw;
+display: none;
 }
 
 .lastQuizLeft {   
     width: 45vw;
-    height: 45vw;
+    height: 50vw;
  
 }
 
 .lastQuizRight {
     width: 38vw;
-    height: 45vw;
+    height: 50vw;
     margin-left: 2vw;
     background-color: black;
 
 }
 
-#submit{
-    margin: 0 auto;
+#result{
+    position:absolute;
+    z-index:1;
     width:20vw;
-    margin-top: 1vw;
-    margin-bottom: 4vw;
+    margin-top: 41vw;
+    margin-left:9vw;
 
 }
 /*winpage
