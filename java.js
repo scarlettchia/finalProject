@@ -74,23 +74,6 @@ function startQuiz() {
     scrollSection(navLinks[1].dataset.link);
  }
 
- /*result*/
-const result = document.getElementById('result');
-
-result.addEventListener('mouseenter', () => {
-  result.style.marginTop="41.5vw";
-  });
-result.addEventListener('mouseleave', () => {
-  result.style.marginTop="41vw";
-  });  
-
-function goToEnd() {
-    scrollSection(navLinks[6].dataset.link);
- }
-
- function goToHome() {
-  scrollSection(navLinks[0].dataset.link);
-}
 
 /*click Ans*/
  
@@ -98,9 +81,13 @@ function goToEnd() {
 var correct = 0;
 var clicked = false;
 const correctNum = document.getElementById('correctNum');
-const next = document.querySelectorAll('.next')[0];
+const nexts = document.querySelectorAll('.next');
+const result = document.getElementById('result');
 
 correctNum.innerHTML=correct;
+for(let i = 0; i < nexts.length; i++) {
+  nexts[i].hidden=true;
+}
 
 function correctAns(){
   if(clicked == false){
@@ -108,40 +95,75 @@ function correctAns(){
     clicked = true;
   }
   correctNum.innerHTML=correct; 
-  next.hidden=false;
-  console.log(correct);
+  for(let i = 0; i < nexts.length; i++) {
+    nexts[i].hidden=false;
+    result.style.display="20vw";
+  }
+
 };
 
 function wrongAns(){
   if(clicked == false){
     clicked = true;
   }
-  next.hidden=false;
-  console.log(correct);
+  for(let i = 0; i < nexts.length; i++) {
+    nexts[i].hidden=false;
+    result.style.width="20vw";
+  }
+
 };
 
 function goToQ2(){
   scrollSection(navLinks[2].dataset.link);
   clicked=false;
-  next.hidden=true;
+  for(let i = 0; i < nexts.length; i++) {
+    nexts[i].hidden=true;
+  }
 }
 
 function goToQ3(){
   scrollSection(navLinks[3].dataset.link);
   clicked=false;
-  next.hidden=true;
+  for(let i = 0; i < nexts.length; i++) {
+    nexts[i].hidden=true;
+  }
 }
 
 function goToQ4(){
   scrollSection(navLinks[4].dataset.link);
   clicked=false;
-  next.hidden=true;
-}
+  for(let i = 0; i < nexts.length; i++) {
+    nexts[i].hidden=true;
+  }
 
+}
 function goToQ5(){
   scrollSection(navLinks[5].dataset.link);
   clicked=false;
-  next.hidden=true;
+  for(let i = 0; i < nexts.length; i++) {
+    nexts[i].hidden=true;
+  }
+  result.style.width="0vw";
+
 }
 
 
+ /*result*/
+ 
+ 
+
+
+ result.addEventListener('mouseenter', () => {
+   result.style.marginTop="41.5vw";
+   });
+ result.addEventListener('mouseleave', () => {
+   result.style.marginTop="41vw";
+   });  
+ 
+ function goToEnd() {
+     scrollSection(navLinks[6].dataset.link);
+  }
+ 
+  function goToHome() {
+   scrollSection(navLinks[0].dataset.link);
+ }
