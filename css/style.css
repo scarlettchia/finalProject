@@ -178,7 +178,12 @@ p{
   z-index: 1;
 }
 
-.ansImg{
+.ansImgCorrect{
+  position:absolute;
+  width: 35vw;
+}
+
+.ansImgWrong{
   position:absolute;
   width: 35vw;
 }

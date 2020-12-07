@@ -83,6 +83,9 @@ var clicked = false;
 const correctNum = document.getElementById('correctNum');
 const nexts = document.querySelectorAll('.next');
 const result = document.getElementById('result');
+const ansImgCorrect = document.querySelectorAll('.ansImgCorrect');
+const ansImgWrong = document.querySelectorAll('.ansImgWrong');
+
 
 correctNum.innerHTML=correct;
 for(let i = 0; i < nexts.length; i++) {
@@ -91,10 +94,14 @@ for(let i = 0; i < nexts.length; i++) {
 
 function correctAns(){
   if(clicked == false){
+    for(let i = 0; i < ansImgCorrect.length; i++) {
+      ansImgCorrect[i].src="images/quizImages/correct.png";
+    }  
     correct++;
     clicked = true;
   }
-  correctNum.innerHTML=correct; 
+  correctNum.innerHTML=correct;
+  
   for(let i = 0; i < nexts.length; i++) {
     nexts[i].hidden=false;
     result.style.width="20vw";
@@ -104,8 +111,12 @@ function correctAns(){
 
 function wrongAns(){
   if(clicked == false){
+    for(let i = 0; i < ansImgWrong.length; i++) {
+      ansImgWrong[i].src="images/quizImages/wrong.png";
+    } 
     clicked = true;
   }
+   
   for(let i = 0; i < nexts.length; i++) {
     nexts[i].hidden=false;
     result.style.width="20vw";
@@ -116,6 +127,12 @@ function wrongAns(){
 function goToQ2(){
   scrollSection(navLinks[2].dataset.link);
   clicked=false;
+  for(let i = 0; i < ansImgCorrect.length; i++) {
+    ansImgCorrect[i].src="images/quizImages/ans.png";
+  }  
+  for(let i = 0; i < ansImgWrong.length; i++) {
+    ansImgWrong[i].src="images/quizImages/ans.png";
+  } 
   for(let i = 0; i < nexts.length; i++) {
     nexts[i].hidden=true;
   }
@@ -124,6 +141,12 @@ function goToQ2(){
 function goToQ3(){
   scrollSection(navLinks[3].dataset.link);
   clicked=false;
+  for(let i = 0; i < ansImgCorrect.length; i++) {
+    ansImgCorrect[i].src="images/quizImages/ans.png";
+  }  
+  for(let i = 0; i < ansImgWrong.length; i++) {
+    ansImgWrong[i].src="images/quizImages/ans.png";
+  } 
   for(let i = 0; i < nexts.length; i++) {
     nexts[i].hidden=true;
   }
@@ -132,6 +155,12 @@ function goToQ3(){
 function goToQ4(){
   scrollSection(navLinks[4].dataset.link);
   clicked=false;
+  for(let i = 0; i < ansImgCorrect.length; i++) {
+    ansImgCorrect[i].src="images/quizImages/ans.png";
+  }  
+  for(let i = 0; i < ansImgWrong.length; i++) {
+    ansImgWrong[i].src="images/quizImages/ans.png";
+  } 
   for(let i = 0; i < nexts.length; i++) {
     nexts[i].hidden=true;
   }
@@ -140,6 +169,12 @@ function goToQ4(){
 function goToQ5(){
   scrollSection(navLinks[5].dataset.link);
   clicked=false;
+  for(let i = 0; i < ansImgCorrect.length; i++) {
+    ansImgCorrect[i].src="images/quizImages/ans.png";
+  }  
+  for(let i = 0; i < ansImgWrong.length; i++) {
+    ansImgWrong[i].src="images/quizImages/ans.png";
+  } 
   for(let i = 0; i < nexts.length; i++) {
     nexts[i].hidden=true;
   }
