@@ -54,6 +54,7 @@ p{
     margin-bottom: 1vw;
 }
 
+
 .container{
     margin-top: 9vw;
     margin-left: auto;
@@ -65,10 +66,8 @@ p{
 }
 
 
-
 .left {   
     width: 25vw;
-    height: 22vw;
     margin-top: 5vw;
     margin-bottom: 10.5vw;
     margin-left: 2.5vw;
@@ -76,14 +75,12 @@ p{
 
 .center {   
     width: 20vw;
-    height: 20vw;
     margin-top: 15vw;
     margin-left: 2vw;
 }
 
 .right {   
     width: 35vw;
-    height: 20vw;
     margin-top: 5vw;
     margin-left: 2vw;
 
@@ -100,8 +97,8 @@ p{
     color:white;
     position:absolute;
     z-index:1;
-    word-break:break-all;
-    overflow: hidden;
+    word-break: break-word;
+    
 }
 
 
@@ -129,8 +126,9 @@ p{
     display: flex;
 
 }
-.quizLeft {   
-    width: 45vw;
+.quizLeft.rect {   
+    margin-left: 7vw;
+    width: 36vw;
     height: 48vw;
 
 }
@@ -138,7 +136,6 @@ p{
 .quizRight {
     width: 38vw;
     height: 45vw;
-    margin-left: 2vw;
     background-color: black;
 
 }
@@ -156,12 +153,12 @@ p{
     color:white;
     position:absolute;
     z-index:1;
-    word-break:break-all;
-    overflow: hidden;
+    word-break:break-word;
+    
 
 }
 
-.ansA{
+.ansA.rect{
     position:absolute;
     width: 32vw;
     height: 10vw;
@@ -169,7 +166,7 @@ p{
     margin-left: 3vw;
     z-index: 1;
 }
-.ansB{
+.ansB.rect{
   position:absolute;
   width: 32vw;
   height: 10vw;
@@ -193,40 +190,88 @@ p{
     color:black;
     position:absolute;
     z-index:1;
-    word-break:break-all;
-    overflow: hidden;
+    word-break:break-word;
+    
+    margin-top:1vw
 }
 .next{
   position:absolute;
   z-index:1;
-  width:20vw;
+  width:15vw;
   margin-top: 41vw;
-  margin-left:9vw;
+  margin-left:11vw;
 
 }
 
-.lastQuizLeft {   
-    width: 45vw;
-    height: 50vw;
- 
-}
-
-.lastQuizRight {
-    width: 38vw;
-    height: 50vw;
-    margin-left: 2vw;
-    background-color: black;
-
-}
 
 #result{
     position:absolute;
     z-index:1;
-    width:20vw;
+    width:25vw;
     margin-top: 41vw;
-    margin-left:9vw;
+    margin-left:7vw;
 
 }
+
+#section-7{
+  display:none;
+}
+
+#homeWin{
+  margin: 0 auto;
+  width:12vw;
+  margin-top:0vw;
+
+}
+#homeLose{
+  margin: 0 auto;
+  width:12vw;
+  margin-top:0vw;
+
+}
+
+
+.endTitle{
+  width:50vw;
+  position:absolute;
+  z-index: 1;
+  margin-top: 1vw;
+}
+
+.endContainer{
+  margin-top: 3.5vw;
+  margin-left: auto;
+  margin-bottom: 0px;
+  margin-right: auto;
+  background-color: black;
+  display: flex;
+
+}
+.endLeft {   
+  width: 40vw;
+  margin-top: 5vw;
+  margin-bottom: 2vw;
+  margin-left: 5vw;
+}
+
+.endRight {   
+  
+  margin-top: 5vw;
+
+}
+
+.endWord{
+  font-size:1.25vw;
+  width: 30vw;
+  margin-top: 8vw;
+  margin-left: 2vw;
+  color:white;
+  position:absolute;
+  z-index:1;
+  white-space: nowrap;
+  
+}
+
 /*winpage
 .congrat{
   position:absolute;
@@ -265,6 +310,7 @@ p{
     right: 5%;
     top: 30%;
     z-index: 2;
+    display:none;
   }
   
   ul {
@@ -286,12 +332,12 @@ p{
   nav a.current {
     background: grey;
   }
-  
+  /*
   .rect {
     background: black;
     height: 20vh;
     width: 500px;
-  }
+  }*/
   
   .align-left {
     float: left;
