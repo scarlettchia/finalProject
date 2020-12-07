@@ -310,7 +310,7 @@ p{
     right: 5%;
     top: 30%;
     z-index: 2;
-    display:none;
+    /*display:none;*/
   }
   
   ul {
