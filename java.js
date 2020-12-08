@@ -2,6 +2,7 @@ const navLinks = document.querySelectorAll('nav a'),
 sliderRects = document.querySelectorAll('.rect');
 
 
+
 function scrollSection(section) {
 
 window.scroll({
@@ -30,6 +31,7 @@ e.preventDefault();
 
 let target = this.dataset.link;
 
+
 scrollSection(target);
 });
 });
@@ -38,6 +40,11 @@ window.addEventListener('scroll', function() {
 animateStuff();
 });
 
+const navDot = document.getElementsByTagName('li');
+
+for(let i = 1; i < navDot.length; i++) {
+  navDot[i].hidden=true;
+};
 
 
 
@@ -71,7 +78,9 @@ start.addEventListener('mouseleave', () => {
   });
 
 function startQuiz() {
+    document.getElementById('section-2').style.display="block";
     scrollSection(navLinks[1].dataset.link);
+    navDot[1].hidden=false;
  }
 
 
@@ -85,138 +94,179 @@ const nexts = document.querySelectorAll('.next');
 const result = document.getElementById('result');
 const ansImgCorrect = document.querySelectorAll('.ansImgCorrect');
 const ansImgWrong = document.querySelectorAll('.ansImgWrong');
+const winPage=document.getElementById('section-7');
 
 
-correctNumWin.innerHTML=correct;
-correctNumLose.innerHTML=correct;
 for(let i = 0; i < nexts.length; i++) {
   nexts[i].hidden=true;
-}
+};
 
-function correctAns(){
-  if(clicked == false){
-    for(let i = 0; i < ansImgCorrect.length; i++) {
-      ansImgCorrect[i].src="images/quizImages/correct.png";
-    }  
+
+for(let i = 0; i < nexts.length; i++) {
+  nexts[i].addEventListener('mouseenter', () => {
+    nexts[i].style.marginTop="41.5vw";
+    });
+  nexts[i].addEventListener('mouseleave', () => {
+    nexts[i].style.marginTop="41vw";
+    }); 
+};
+
+const ansA = document.querySelectorAll('.ansA.slide-in');
+const ansB = document.querySelectorAll('.ansB.slide-in');
+
+for(let i = 0; i < ansA.length; i++) {
+  ansA[i].addEventListener('mouseenter', () => {
+    ansA[i].style.backgroundColor="white";
+    });
+    ansA[i].addEventListener('mouseleave', () => {
+      ansA[i].style.backgroundColor="black";
+      });
+};
+for(let i = 0; i < ansA.length; i++) {
+  ansB[i].addEventListener('mouseenter', () => {
+    ansB[i].style.backgroundColor="white";
+    });
+    ansB[i].addEventListener('mouseleave', () => {
+      ansB[i].style.backgroundColor="black";
+      });
+};
+
+
+
+
+/*Q1*/
+function q1_correct(){
+  if(clicked == false && ansImgCorrect[0].src == ansImgWrong[0].src){
+    ansImgCorrect[0].src="images/quizImages/correct.png";
     correct++;
     clicked = true;
-  }
-  correctNumWin.innerHTML=correct;
-  correctNumLose.innerHTML=correct;
-
-  for(let i = 0; i < nexts.length; i++) {
-    nexts[i].hidden=false;
-    result.style.width="25vw";
-  }
-
+  }  
+    nexts[0].hidden=false;
 };
-
-function wrongAns(){
-  if(clicked == false){
-    for(let i = 0; i < ansImgWrong.length; i++) {
-      ansImgWrong[i].src="images/quizImages/wrong.png";
-    } 
+function q1_wrong(){
+  if(clicked == false && ansImgCorrect[0].src == ansImgWrong[0].src){
+    ansImgWrong[0].src="images/quizImages/wrong.png";
     clicked = true;
-  }
-   
-  for(let i = 0; i < nexts.length; i++) {
-    nexts[i].hidden=false;
-    result.style.width="25vw";
-  }
-
+  }  
+    nexts[0].hidden=false;
 };
-
 function goToQ2(){
+  document.getElementById('section-3').style.display="block";
   scrollSection(navLinks[2].dataset.link);
   clicked=false;
-  for(let i = 0; i < ansImgCorrect.length; i++) {
-    ansImgCorrect[i].src="images/quizImages/ans.png";
-  }  
-  for(let i = 0; i < ansImgWrong.length; i++) {
-    ansImgWrong[i].src="images/quizImages/ans.png";
-  } 
-  for(let i = 0; i < nexts.length; i++) {
-    nexts[i].hidden=true;
-  }
-}
+  navDot[2].hidden=false;
+};
 
+/*Q2*/
+function q2_correct(){
+  if(clicked == false && ansImgCorrect[1].src == ansImgWrong[1].src){
+    ansImgCorrect[1].src="images/quizImages/correct.png";
+    correct++;
+    clicked = true;
+  }  
+    nexts[1].hidden=false;
+};
+function q2_wrong(){
+  if(clicked == false && ansImgCorrect[1].src == ansImgWrong[1].src){
+    ansImgWrong[1].src="images/quizImages/wrong.png";
+    clicked = true;
+  }  
+    nexts[1].hidden=false;
+};
 function goToQ3(){
+  document.getElementById('section-4').style.display="block";
   scrollSection(navLinks[3].dataset.link);
   clicked=false;
-  for(let i = 0; i < ansImgCorrect.length; i++) {
-    ansImgCorrect[i].src="images/quizImages/ans.png";
-  }  
-  for(let i = 0; i < ansImgWrong.length; i++) {
-    ansImgWrong[i].src="images/quizImages/ans.png";
-  } 
-  for(let i = 0; i < nexts.length; i++) {
-    nexts[i].hidden=true;
-  }
-}
+  navDot[3].hidden=false;
+};
 
+/*Q3*/
+function q3_correct(){
+  if(clicked == false && ansImgCorrect[2].src == ansImgWrong[2].src){
+    ansImgCorrect[2].src="images/quizImages/correct.png";
+    correct++;
+    clicked = true;
+  }  
+    nexts[2].hidden=false;
+};
+function q3_wrong(){
+  if(clicked == false && ansImgCorrect[2].src == ansImgWrong[2].src){
+    ansImgWrong[2].src="images/quizImages/wrong.png";
+    clicked = true;
+  }  
+    nexts[2].hidden=false;
+};
 function goToQ4(){
+  document.getElementById('section-5').style.display="block";
   scrollSection(navLinks[4].dataset.link);
   clicked=false;
-  for(let i = 0; i < ansImgCorrect.length; i++) {
-    ansImgCorrect[i].src="images/quizImages/ans.png";
-  }  
-  for(let i = 0; i < ansImgWrong.length; i++) {
-    ansImgWrong[i].src="images/quizImages/ans.png";
-  } 
-  for(let i = 0; i < nexts.length; i++) {
-    nexts[i].hidden=true;
-  }
+  navDot[4].hidden=false;
+};
 
-}
+/*Q4*/
+function q4_correct(){
+  if(clicked == false && ansImgCorrect[3].src == ansImgWrong[3].src){
+    ansImgCorrect[3].src="images/quizImages/correct.png";
+    correct++;
+    clicked = true;
+  }  
+    nexts[3].hidden=false;
+};
+function q4_wrong(){
+  if(clicked == false && ansImgCorrect[3].src == ansImgWrong[3].src){
+    ansImgWrong[3].src="images/quizImages/wrong.png";
+    clicked = true;
+  }  
+    nexts[3].hidden=false;
+};
 function goToQ5(){
+  document.getElementById('section-6').style.display="block";
   scrollSection(navLinks[5].dataset.link);
   clicked=false;
-  for(let i = 0; i < ansImgCorrect.length; i++) {
-    ansImgCorrect[i].src="images/quizImages/ans.png";
-  }  
-  for(let i = 0; i < ansImgWrong.length; i++) {
-    ansImgWrong[i].src="images/quizImages/ans.png";
-  } 
-  for(let i = 0; i < nexts.length; i++) {
-    nexts[i].hidden=true;
-  }
-  result.style.width="0vw";
+  navDot[5].hidden=false;
+};
 
-}
+/*Q5*/
+function q5_correct(){
+  if(clicked == false && ansImgCorrect[4].src == ansImgWrong[4].src){
+    ansImgCorrect[4].src="images/quizImages/correct.png";
+    correct++;
+    clicked = true;
+  }  
+    result.style.display="block";
+};
+function q5_wrong(){
+  if(clicked == false && ansImgCorrect[4].src == ansImgWrong[4].src){
+    ansImgWrong[4].src="images/quizImages/wrong.png";
+    clicked = true;
+  }  
+    result.style.display="block";
+};
+function goToEnd(){
+  correctNumWin.innerHTML=correct;
+  correctNumLose.innerHTML=correct;
+  if(correct>=4){
+    winPage.style.display="block"; 
+   scrollSection(navLinks[6].dataset.link);
+   navDot[6].hidden=false;
+  }else{
+    document.getElementById('section-8').style.display="block";
+    scrollSection(navLinks[7].dataset.link);
+    navDot[7].hidden=false;
+   }
+   console.log(correct);
+};
 
 
  /*result*/
  
  result.addEventListener('mouseenter', () => {
-   result.style.marginTop="41.5vw";
-   });
- result.addEventListener('mouseleave', () => {
-   result.style.marginTop="41vw";
-   });  
- 
-  const winPage=document.getElementById('section-7');
+  result.style.marginTop="41.5vw";
+  });
+result.addEventListener('mouseleave', () => {
+  result.style.marginTop="41vw";
+  });  
 
- function goToEnd() {
-  clicked=false;
-  for(let i = 0; i < ansImgCorrect.length; i++) {
-    ansImgCorrect[i].src="images/quizImages/ans.png";
-  }  
-  for(let i = 0; i < ansImgWrong.length; i++) {
-    ansImgWrong[i].src="images/quizImages/ans.png";
-  } 
-  for(let i = 0; i < nexts.length; i++) {
-    nexts[i].hidden=true;
-  }
-  result.style.width="0vw";
-   if(correct>=4){
-    winPage.style.display="block"; 
-    scrollSection(navLinks[6].dataset.link);
-    
-   }else{
-     
-     scrollSection(navLinks[7].dataset.link);
-    }
-  }
 
   /*home*/
 const homeWin = document.getElementById('homeWin');
@@ -236,9 +286,31 @@ homeLose.addEventListener('mouseleave', () => {
   });
 
   function goToHome() {
-    correct=0;
-    winPage.style.display="none"; 
-   scrollSection(navLinks[0].dataset.link);
-   
+    scrollSection(navLinks[0].dataset.link);
+    for(let i = 1; i < navDot.length; i++) {
+      navDot[i].hidden=true;
+    };
+    setTimeout("reset()",1000 );  
+ };
 
- }
+ function reset(){
+  correct=0;
+  clicked=false;
+  for(let i = 0; i < 5; i++) {
+    ansImgCorrect[i].src="images/quizImages/ans.png";
+    ansImgWrong[i].src="images/quizImages/ans.png";
+  }  
+  for(let i = 0; i < nexts.length; i++) {
+    nexts[i].hidden=true;
+  }
+  result.style.display="none";
+  document.getElementById('section-2').style.display="none";
+  document.getElementById('section-3').style.display="none";
+  document.getElementById('section-4').style.display="none";
+  document.getElementById('section-5').style.display="none";
+  document.getElementById('section-6').style.display="none";
+  document.getElementById('section-7').style.display="none";
+  document.getElementById('section-8').style.display="none";
+  
+  
+ };

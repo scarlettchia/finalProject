@@ -10,7 +10,7 @@ html{
     linear-gradient(90deg, #E5ACBA  1px, transparent 0);
     background-size: 30px 30px, 30px 30px;
     background-attachment: fixed;
-    overflow: hidden;
+    /*overflow-x: hidden;*/
 }
 
 
@@ -34,51 +34,61 @@ p{
 
 /*Structure*/
   section {
-    padding: 3%;
-    /*height: 100vh;*/
-    width: 100vw;
+    padding-top:3vw;
+    padding-bottom:3vw;
+      
   }
-  
-  /*section:first-of-type {
-    background: #ffc600;
-  }*/
+  #section-2{
+    display:none;
+  }
+  #section-3{
+    display:none;
+  }
+  #section-4{
+    display:none;
+  }
+  #section-5{
+    display:none;
+  }
+  #section-6{
+    display:none;
+  }
+  #section-7{
+    display:none;
+  }
+ #section-8{
+    display:none;
+  }
+
+/*home*/
 
 .title{
-    width: 90%;
+    width: 50%;
     position:absolute;
     z-index: 1;
-}
-
-.titleImg{
-    width:50vw;
     margin-bottom: 1vw;
+    margin-left:5vw;
 }
-
-
 .container{
+    width:90%;
     margin-top: 9vw;
     margin-left: auto;
     margin-bottom: 0px;
     margin-right: auto;
     background-color: black;
     display: flex;
-
 }
-
-
 .left {   
     width: 25vw;
     margin-top: 5vw;
     margin-bottom: 10.5vw;
     margin-left: 2.5vw;
 }
-
 .center {   
     width: 20vw;
     margin-top: 15vw;
     margin-left: 2vw;
 }
-
 .right {   
     width: 35vw;
     margin-top: 5vw;
@@ -100,13 +110,12 @@ p{
     word-break: break-word;
     
 }
-
-
 #start{
     margin: 0 auto;
     width:18vw;
     margin-top: 1vw;
-    margin-bottom: 4vw;
+    cursor:pointer;
+
 }
 
 
@@ -115,7 +124,7 @@ p{
     background: red;
   }*/
 
-  /*------quizPage--------*/
+/*------quizPage--------*/
 
 .quizContainer{
     margin-top: 0px;
@@ -124,28 +133,22 @@ p{
     margin-right: auto;
     width: 90%;
     display: flex;
-
 }
 .quizLeft.rect {   
     margin-left: 7vw;
     width: 36vw;
     height: 48vw;
-
 }
-
 .quizRight {
     width: 38vw;
     height: 45vw;
     background-color: black;
-
 }
 .questionImg{
     position:absolute;
     width: 34vw;
     margin-left: 3vw;
-
 }
-
 .question{
     width: 28vw;
     margin-top: 5vw;
@@ -154,44 +157,41 @@ p{
     position:absolute;
     z-index:1;
     word-break:break-word;
-    
-
 }
-
 .ansA.rect{
     position:absolute;
     width: 32vw;
-    height: 10vw;
+    height: 8.5vw;
     margin-top: 23vw;
     margin-left: 3vw;
     z-index: 1;
+    cursor:pointer;
 }
+
 .ansB.rect{
   position:absolute;
   width: 32vw;
-  height: 10vw;
+  height: 8.5vw;
   margin-top: 32vw;
   margin-left: 3vw;
   z-index: 1;
+  cursor:pointer;
 }
 
 .ansImgCorrect{
   position:absolute;
   width: 35vw;
 }
-
 .ansImgWrong{
   position:absolute;
   width: 35vw;
 }
-
 .ansWord{
     margin-left: 2vw;
     color:black;
     position:absolute;
     z-index:1;
     word-break:break-word;
-    
     margin-top:1vw
 }
 .next{
@@ -200,66 +200,60 @@ p{
   width:15vw;
   margin-top: 41vw;
   margin-left:11vw;
-
+  cursor:pointer;
 }
-
-
 #result{
     position:absolute;
     z-index:1;
     width:25vw;
     margin-top: 41vw;
     margin-left:7vw;
+    display:none;
+    cursor:pointer;
 
 }
 
-#section-7{
-  display:none;
-}
-
+/*-----end page-----*/
 #homeWin{
   margin: 0 auto;
   width:12vw;
   margin-top:0vw;
-
+  cursor:pointer;
 }
 #homeLose{
   margin: 0 auto;
   width:12vw;
   margin-top:0vw;
+  cursor:pointer;
 
 }
-
-
 .endTitle{
   width:50vw;
   position:absolute;
   z-index: 1;
   margin-top: 1vw;
+  margin-left:5vw;
 }
-
 .endContainer{
+  width:90%;
+  height:37vw;
   margin-top: 3.5vw;
   margin-left: auto;
   margin-bottom: 0px;
   margin-right: auto;
   background-color: black;
   display: flex;
-
 }
 .endLeft {   
-  width: 40vw;
+  width: 35vw;
   margin-top: 5vw;
   margin-bottom: 2vw;
   margin-left: 5vw;
 }
-
-.endRight {   
-  
+.endRight {    
   margin-top: 5vw;
-
+  
 }
-
 .endWord{
   font-size:1.25vw;
   width: 30vw;
@@ -268,46 +262,17 @@ p{
   color:white;
   position:absolute;
   z-index:1;
-  white-space: nowrap;
-  
+  white-space: nowrap;  
 }
 
-/*winpage
-.congrat{
-  position:absolute;
-  margin-left: 4vw;
-  margin-top:2vw;
-  z-index: 1;
-}
-.winLeft {  
-    margin-top: 7vw;
-    margin-bottom: 4vw;
-    margin-left: 8vw;
-    margin-right:3vw;
-}    
-
-#home{
-      margin: 0 auto;
-      width:18vw;
-      margin-top: 1vw;
-      margin-bottom: 4vw;
-  }
-  
-
-
-/*---------------------------*/
 /*  
   section:nth-of-type(3) {
     background: blue;
   }
-  
-  section:nth-of-type(4) {
-    background: green;
-  }
 */  
   nav {
     position: fixed;
-    right: 5%;
+    right: 3%;
     top: 30%;
     z-index: 2;
     /*display:none;*/

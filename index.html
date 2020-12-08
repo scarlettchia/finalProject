@@ -25,7 +25,7 @@
               
             <section id="section-1" style="padding-top:0.5%">
                     <div class="title">
-                        <img class="titleImg" src="images/home_title.png"> 
+                        <img src="images/home_title.png"> 
                     </div>
                     <div class="container">
                         
@@ -44,7 +44,7 @@
                             </div>
                         
                     </div>   
-                    <div id="start" onclick="startQuiz()" >
+                    <div id="start"  onclick="startQuiz()" >
                             <img src="images/home_start.png" >
                     </div>
 
@@ -66,14 +66,14 @@
                                 </article>
                             </div>
         
-                            <div class="ansA rect slide-in align-right" onclick="correctAns()">
+                            <div class="ansA rect slide-in align-right" onclick="q1_correct()">
                                 <img class="ansImgCorrect" src="images/quizImages/ans.png">
                                 <div class="ansWord">
                                     <p>A baking failure by a nun</p>
                                 </div>
                             </div>
         
-                            <div class="ansB rect slide-in align-right" onclick="wrongAns()">
+                            <div class="ansB rect slide-in align-right" onclick="q1_wrong()">
                                 <img class="ansImgWrong" src="images/quizImages/ans.png">
                                 <div class="ansWord">
                                     <p>A bait for a kind of bird</p>
@@ -99,13 +99,13 @@
                                     <p>Whose appearance is the basic of</br>gingerbread man’s look?</p>
                                 </article>
                         </div>
-                        <div class="ansA rect slide-in align-right" onclick="correctAns()">
+                        <div class="ansA rect slide-in align-right" onclick="q2_correct()">
                             <img class="ansImgCorrect" src="images/quizImages/ans.png">
                             <div class="ansWord">
                                 <p>Queen Elizabeth I</p>
                             </div>
                         </div>
-                        <div class="ansB rect slide-in align-right" onclick="wrongAns()">
+                        <div class="ansB rect slide-in align-right" onclick="q2_wrong()">
                             <img class="ansImgWrong" src="images/quizImages/ans.png">
                             <div class="ansWord">
                                 <p>Queen Elizabeth II</p>
@@ -131,13 +131,13 @@
                                     <p>What does “Tiramisù” originally mean</br>in Italian?</p>
                                 </article>
                         </div>
-                        <div class="ansA rect slide-in align-right" onclick="correctAns()">
+                        <div class="ansA rect slide-in align-right" onclick="q3_correct()">
                             <img class="ansImgCorrect" src="images/quizImages/ans.png">
                             <div class="ansWord">
                                 <p>Pick me up</p>
                             </div>
                         </div>
-                        <div class="ansB rect slide-in align-right" onclick="wrongAns()">
+                        <div class="ansB rect slide-in align-right" onclick="q3_wrong()">
                             <img class="ansImgWrong" src="images/quizImages/ans.png">
                             <div class="ansWord">
                                 <p>Let me go</p>
@@ -163,13 +163,13 @@
                                     <p>What does “Chocolate” mean in</br>Greek?</p>
                                 </article>
                         </div>
-                        <div class="ansA rect slide-in align-right" onclick="correctAns()">
+                        <div class="ansA rect slide-in align-right" onclick="q4_correct()">
                             <img class="ansImgCorrect" src="images/quizImages/ans.png">
                             <div class="ansWord">
                                 <p>Food of the Gods</p>
                             </div>
                         </div>
-                        <div class="ansB rect slide-in align-right" onclick="wrongAns()">
+                        <div class="ansB rect slide-in align-right" onclick="q4_wrong()">
                             <img class="ansImgWrong" src="images/quizImages/ans.png">
                             <div class="ansWord">
                                 <p>Food of the Ghosts</p>
@@ -195,13 +195,13 @@
                                     <p>What does “Cream Puff” means in</br>French?</p>
                                 </article>
                         </div>
-                        <div class="ansA rect slide-in align-right" onclick="correctAns()">
+                        <div class="ansA rect slide-in align-right" onclick="q5_correct()">
                             <img class="ansImgCorrect" src="images/quizImages/ans.png">
                             <div class="ansWord">
                                 <p>Cabbage</p>
                             </div>
                         </div>
-                        <div class="ansB rect slide-in align-right" onclick="wrongAns()" >
+                        <div class="ansB rect slide-in align-right" onclick="q5_wrong()" >
                             <img class="ansImgWrong" src="images/quizImages/ans.png">
                             <div class="ansWord">
                                 <p>Explosion</p>
@@ -228,7 +228,7 @@
                 <div class="endLeft">
                     <img src="animation/home_left_animation.gif">
                 </div>
-                <div class="endRight">
+                <div class="endRight" style="margin-left:5vw";>
                     <img class="rightImg" src="animation/home_right_animation.gif">
                     <div class="endWord">
                         <h2>Great Job!</h2>
@@ -243,16 +243,16 @@
     </section>
 
     <section id="section-8" >
-        <div class="endTitle" style="margin-left: 5vw;">
+        <div class="endTitle">
             <img src="images/oops.png"> 
         </div>
         <div class="endContainer" style="margin-top: 8vw;">
             
                 <div class="endLeft">
-                    <img style="margin-left: 4vw;" src="animation/home_center_animation.gif">
+                    <img style="margin-left: 3vw; width:80%;" src="animation/home_center_animation.gif">
                 </div>
-                <div class="endRight" style="margin-top:0vw;">
-                    <img class="rightImg" style="width:45vw" src="animation/home_right_animation.gif">
+                <div class="endRight"style="margin-top: 2vw;" >
+                    <img class="rightImg" style="width:40vw" src="animation/home_right_animation.gif">
                     <div class="endWord" style="margin-top:9vw;">
                         <h2>Uh-oh...</h2>
                         <p>You only get <nobr id="correctNumLose" style="color:yellow; font-size:2vw;"></nobr> correct.<br>Although you are not a master of dessert,</br>it's alright! Enjoy the delicious dessert!</p>
