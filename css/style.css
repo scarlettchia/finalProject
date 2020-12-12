@@ -217,14 +217,14 @@ p{
 #homeWin{
   margin: 0 auto;
   z-index: 4;
-  width:12vw;
+  width:20vw;
   margin-top:0vw;
   cursor:pointer;
   z-index: 4;
 }
 #homeLose{
   margin: 0 auto;
-  width:12vw;
+  width:20vw;
   margin-top:0vw;
   cursor:pointer;
 
