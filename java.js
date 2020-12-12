@@ -135,6 +135,14 @@ for(let i = 0; i < ansA.length; i++) {
 
 
 /*Q1*/
+const canele = document.getElementById('canele');
+canele.addEventListener('mouseenter', () => {
+  canele.src = "images/quizImages/canele.png";
+});
+canele.addEventListener('mouseleave', () => {
+  canele.src = "animation/canele.gif";
+});
+
 function q1_correct(){
   if(clicked == false && ansImgCorrect[0].src == ansImgWrong[0].src){
     ansImgCorrect[0].src="images/quizImages/correct.png";
@@ -158,6 +166,13 @@ function goToQ2(){
 };
 
 /*Q2*/
+const ginger = document.getElementById('ginger');
+ginger.addEventListener('mouseenter', () => {
+  ginger.src = "images/quizImages/ginger.png";
+});
+ginger.addEventListener('mouseleave', () => {
+  ginger.src = "animation/ginger.gif";
+});
 function q2_correct(){
   if(clicked == false && ansImgCorrect[1].src == ansImgWrong[1].src){
     ansImgCorrect[1].src="images/quizImages/correct.png";
@@ -181,6 +196,13 @@ function goToQ3(){
 };
 
 /*Q3*/
+const tiramisu = document.getElementById('tiramisu');
+tiramisu.addEventListener('mouseenter', () => {
+  tiramisu.src = "images/quizImages/tiramisu.png";
+});
+tiramisu.addEventListener('mouseleave', () => {
+  tiramisu.src = "animation/tiramisu.gif";
+});
 function q3_correct(){
   if(clicked == false && ansImgCorrect[2].src == ansImgWrong[2].src){
     ansImgCorrect[2].src="images/quizImages/correct.png";
@@ -204,6 +226,13 @@ function goToQ4(){
 };
 
 /*Q4*/
+const chocolate = document.getElementById('chocolate');
+chocolate.addEventListener('mouseenter', () => {
+  chocolate.src = "images/quizImages/chocolate.png";
+});
+chocolate.addEventListener('mouseleave', () => {
+  chocolate.src = "animation/chocolate.gif";
+});
 function q4_correct(){
   if(clicked == false && ansImgCorrect[3].src == ansImgWrong[3].src){
     ansImgCorrect[3].src="images/quizImages/correct.png";
@@ -227,6 +256,13 @@ function goToQ5(){
 };
 
 /*Q5*/
+const puff = document.getElementById('puff');
+puff.addEventListener('mouseenter', () => {
+  puff.src = "images/quizImages/puff.png";
+});
+puff.addEventListener('mouseleave', () => {
+  puff.src = "animation/puff.gif";
+});
 function q5_correct(){
   if(clicked == false && ansImgCorrect[4].src == ansImgWrong[4].src){
     ansImgCorrect[4].src="images/quizImages/correct.png";

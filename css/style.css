@@ -216,9 +216,11 @@ p{
 /*-----end page-----*/
 #homeWin{
   margin: 0 auto;
+  z-index: 4;
   width:12vw;
   margin-top:0vw;
   cursor:pointer;
+  z-index: 4;
 }
 #homeLose{
   margin: 0 auto;
